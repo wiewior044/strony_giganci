@@ -1,0 +1,92 @@
+body {
+	background-color: #cfe8ff;
+}
+
+#ambulance {
+	width: 500px;
+	height: 300px;
+	border: 1px solid black;
+	border-radius: 200px 5px 10px 20px;
+    text-align: center;
+	color: red;
+	font-family: monospace;
+	font-size: 64px;
+	background: linear-gradient(
+  135deg,
+  #ffffff 0%,
+  #e8edf5 25%,
+  #164b91 50%,
+  #d71935 75%,
+  #ffffff 100%
+);
+}
+
+.wheel {
+	width: 90px;
+	height: 90px;
+	background: #e8e8e8;
+	border: 10px solid black;
+	border-radius: 100px;
+	text-align: center;
+	animation: spin 1s linear infinite;
+}
+
+#wheel-front {
+	position: relative;
+	left: 70px;
+	bottom: 50px;
+}
+
+#wheel-back {
+	position: relative;
+	left: 350px;
+	bottom: 160px;
+}
+
+@keyframes spin {
+	/* TODO: opisz pełny obrót od 0 do 360 stopni */
+	from {
+		transform: rotate(0deg);
+	}
+	
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#siren {
+	width: 75px;
+	height: 75px;
+	background-color: black;
+	border-radius: 50px 50px 5px 5px;
+	position: relative;
+	left: 200px;
+}
+
+#siren:hover {
+	animation: siren 1s infinite;
+}
+
+@keyframes siren {
+	0% { background-color: black;}
+	15% { background-color: blue;}
+    65% { background-color: red;}
+}
+
+#emergency {
+	position: absolute;
+	right: 30%;
+	top: 200px;
+	padding: 20px;
+	background: red;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border: 2px solid blue;
+	border-radius: 10px;
+	transition: transform 1s;
+}
+
+#emergency:hover {
+	transform: scale(1.5);
+}
