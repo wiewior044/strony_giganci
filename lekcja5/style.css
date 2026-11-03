@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 15%);
+}
+
+.postcard {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  background: #6200ff;
+  background: linear-gradient(180deg, rgba(98, 0, 255, 1) 0%, rgba(255, 47, 0, 1) 96%);
+  
+}
+
+.sun {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  width: 80px;
+  height: 80px;
+  /* TODO: sun shape and glow */
+  border-radius: 50%;
+  background-color: hsl(22, 100%, 50%);
+  box-shadow: 0 0 40px 20px hsl(10, 100%, 50%);
+  /* TODO: sun color experiment */
+}
+
+.hills {
+  position: absolute;
+  bottom: 30%;
+  left: -10%;
+  width: 120%;
+  height: 40%;
+  /* TODO: hills shape */
+  background-color: green;
+  border-radius: 50% 50% 0 0 / 35% 35% 0 0;
+}
+
+.water {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 32%;
+  /* TODO: water color and transparency */
+  background: #0800ff;
+  background: linear-gradient(180deg, rgba(8, 0, 255, 0.69) 0%, rgba(0, 255, 255, 1) 85%);
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: Georgia, serif;
+  /* TODO: text styling and shadow */
+  /* TODO: text color experiment */
+  font-size: 2rem;
+  color: white;
+  text-shadow: 7px 3px 4px rgba(0,10,255,0.6);
+}
